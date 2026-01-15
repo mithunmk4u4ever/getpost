@@ -6,7 +6,13 @@ const port=5555
 
 const app=express()
 
-app.use(cors())
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://getpost-fu9a.vercel.app"
+  ],
+  credentials: true
+}));
 app.use(express.json())
 
 mongoose.connect(process.env.MONGO_URI)
