@@ -10,7 +10,7 @@ function Students() {
   async function handleAddData(e) {
     e.preventDefault();
     try {
-      const res = await axiosInstance.post("/add", { name, course });
+      const res = await axiosInstance.post("/api/add", { name, course });
       fetchData();
       alert(res.data);
     } catch (error) {
@@ -24,7 +24,7 @@ function Students() {
 
   async function fetchData() {
     try {
-      const res = await axiosInstance.get("/data");
+      const res = await axiosInstance.get("/api/data");
       setStudents(Array.isArray(res.data) ? res.data : []);
     } catch (error) {
       console.error(error);
