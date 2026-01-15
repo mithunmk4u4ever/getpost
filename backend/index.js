@@ -11,6 +11,7 @@ app.use(cors({
     "http://localhost:5173",
     "https://getpost-fu9a.vercel.app"
   ],
+  methods:"GET,POST,PUT,PATCH,DELETE",
   credentials: true
 }));
 app.use(express.json())
