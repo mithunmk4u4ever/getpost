@@ -1,3 +1,7 @@
+import React, { useEffect, useState } from 'react'
+import axios from "axios"
+import axiosInstance from './axiosInstance'
+
 function Students() {
   const [name, setName] = useState("");
   const [course, setCourse] = useState("");
@@ -46,4 +50,6 @@ function Students() {
     </div>
   );
 }
+
+
 export default Students
