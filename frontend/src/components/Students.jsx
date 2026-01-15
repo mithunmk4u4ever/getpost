@@ -41,7 +41,7 @@ function Students() {
             <button type='submit'>Add Data</button>
         </form>
         {
-            students.map(std=>
+          students &&  students.map(std=>
                 <div>
                     <h3>{std.name}</h3>
                     <h4>{std.course}</h4>
