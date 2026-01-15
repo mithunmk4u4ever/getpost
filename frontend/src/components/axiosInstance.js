@@ -27,19 +27,19 @@ const axiosInstance = axios.create({
 /* =========================
    RESPONSE INTERCEPTOR
    ========================= */
-axiosInstance.interceptors.response.use(
-  (response) => response,
-  (error) => {
+// axiosInstance.interceptors.response.use(
+//   (response) => response,
+//   (error) => {
     // Optional: global error handling
-    if (error.response) {
-      if (error.response.status === 401) {
-        console.error("Unauthorized - Token expired");
+    // if (error.response) {
+    //   if (error.response.status === 401) {
+    //     console.error("Unauthorized - Token expired");
         // optional redirect to login
         // window.location.href = "/login";
-      }
-    }
-    return Promise.reject(error);
-  }
-);
+//       }
+//     }
+//     return Promise.reject(error);
+//   }
+// );
 
 export default axiosInstance;
